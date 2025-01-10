@@ -7,14 +7,19 @@ while (chute != numeroSecreto) {
     chute = prompt('Escolha um número entre 1 e 5.');
 
     if(numeroSecreto == chute){
-            alert(`Você acertou em ${tentativas} tentativas! o número secreto era ${numeroSecreto}`);
+        break;
+            
     } else {
         if(numeroSecreto > chute){
             alert(`O número secreto é maior que ${chute}` )
         } else {
             alert(`O número secreto é menor que ${chute}`)
         }
-        console.log("Você errou!");
+        tentativas++
     }
-    tentativas++
+
 }
+
+let palavraTentativa = tentativas > 1 ? ' tentativas' : ' tentativa';
+
+alert(`Você acertou em ${tentativas} ${palavraTentativa}! o número secreto era ${numeroSecreto}`);
