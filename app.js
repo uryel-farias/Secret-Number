@@ -6,5 +6,10 @@ let chute = prompt('Escolha um número entre 1 e 3.');
 if(numeroSecreto == chute){
         console.log(`Você acertou! o número secreto era ${numeroSecreto}`);
 } else {
+    if(numeroSecreto > chute){
+        alert(`O número secreto é maior que ${chute}` )
+    } else {
+        alert(`O número secreto é menor que ${chute}`)
+    }
     console.log("Você errou!");
 }
